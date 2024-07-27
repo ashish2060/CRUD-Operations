@@ -17,7 +17,7 @@ export function UserContextProvider({ children }) {
 
   //   addUser
   async function addUser(e) {
-    const response = await fetch(`http://localhost:3000/api/adduser`, {
+    const response = await fetch(`${process.env.BASE_URL}/api/adduser`, {
       method: "POST",
       "Content-Type": "application/json",
       body: JSON.stringify(formData),
@@ -31,7 +31,7 @@ export function UserContextProvider({ children }) {
   //   update user
   async function updateUser(userId) {
     const response = await fetch(
-      `http://localhost:3000/api/updateuser/${userId}`,
+      `${process.env.BASE_URL}/api/updateuser/${userId}`,
       {
         method: "POST",
         "Content-Type": "application/json",
@@ -44,7 +44,7 @@ export function UserContextProvider({ children }) {
 
   //   fetchAllUser
   async function fetchAllUser() {
-    const response = await fetch("http://localhost:3000/api/fetchalluser");
+    const response = await fetch(`${process.env.BASE_URL}/api/fetchalluser`);
     const data = await response.json();
     setAllUser(data.allUser);
   }
@@ -52,7 +52,7 @@ export function UserContextProvider({ children }) {
   //   deleteUser
   async function deleteUser(userId) {
     const response = await fetch(
-      `http://localhost:3000/api/deleteuser/${userId}`,
+      `${process.env.BASE_URL}/api/deleteuser/${userId}`,
       {
         method: "DELETE",
         "Content-Type": "application/json",

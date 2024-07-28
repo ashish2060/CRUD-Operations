@@ -17,47 +17,40 @@ export function UserContextProvider({ children }) {
 
   //   addUser
   async function addUser(e) {
-    const response = await fetch(`${process.env.BASE_URL}/api/adduser`, {
+    const response = await fetch(`/api/adduser`, {
       method: "POST",
       "Content-Type": "application/json",
       body: JSON.stringify(formData),
     });
     const data = await response.json();
 
-    console.log(data);
     fetchAllUser();
   }
 
   //   update user
   async function updateUser(userId) {
-    const response = await fetch(
-      `${process.env.BASE_URL}/api/updateuser/${userId}`,
-      {
-        method: "POST",
-        "Content-Type": "application/json",
-        body: JSON.stringify(formData),
-      }
-    );
+    const response = await fetch(`/api/updateuser/${userId}`, {
+      method: "POST",
+      "Content-Type": "application/json",
+      body: JSON.stringify(formData),
+    });
     const data = await response.json();
     fetchAllUser();
   }
 
   //   fetchAllUser
   async function fetchAllUser() {
-    const response = await fetch(`${process.env.BASE_URL}/api/fetchalluser`);
+    const response = await fetch(`/api/fetchalluser`);
     const data = await response.json();
     setAllUser(data.allUser);
   }
 
   //   deleteUser
   async function deleteUser(userId) {
-    const response = await fetch(
-      `${process.env.BASE_URL}/api/deleteuser/${userId}`,
-      {
-        method: "DELETE",
-        "Content-Type": "application/json",
-      }
-    );
+    const response = await fetch(`/api/deleteuser/${userId}`, {
+      method: "DELETE",
+      "Content-Type": "application/json",
+    });
     const data = await response.json();
 
     fetchAllUser();

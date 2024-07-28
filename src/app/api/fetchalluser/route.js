@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import userModel from "@/utils/model/User";
 import mongoose from "mongoose";
 import { NextResponse } from "next/server";

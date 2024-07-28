@@ -49,7 +49,7 @@ const UserData = ({ addNewData, setAddNewData }) => {
 
   // mailHandler
   async function mailHandler(user) {
-    const response = await fetch(`${process.env.BASE_URL}/api/sendmail`, {
+    const response = await fetch(`/api/sendmail`, {
       method: "POST",
       "Content-Type": "application/json",
       body: JSON.stringify(user),

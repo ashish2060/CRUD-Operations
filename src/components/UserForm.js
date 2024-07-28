@@ -48,7 +48,7 @@ const UserForm = ({ addNewData, setAddNewData }) => {
               name="name"
               value={formData.name}
               onChange={changeHandler}
-              className="w-full dark:bg-gray-700 p-3 rounded-md outline-nonetext-white focus:outline-white"
+              className="w-full dark:bg-gray-700 p-3 rounded-md outline-nonetext-white focus:outline-white text-white"
             />
 
             <input
@@ -58,7 +58,7 @@ const UserForm = ({ addNewData, setAddNewData }) => {
               name="phoneNumber"
               value={formData.phoneNumber}
               onChange={changeHandler}
-              className="w-full dark:bg-gray-700 p-3 rounded-md outline-nonetext-white focus:outline-white"
+              className="w-full dark:bg-gray-700 p-3 rounded-md outline-nonetext-white focus:outline-white text-white"
               max="10"
             />
             <input
@@ -68,7 +68,7 @@ const UserForm = ({ addNewData, setAddNewData }) => {
               name="email"
               value={formData.email}
               onChange={changeHandler}
-              className="w-full dark:bg-gray-700 p-3 rounded-md outline-nonetext-white focus:outline-white"
+              className="w-full dark:bg-gray-700 p-3 rounded-md outline-nonetext-white focus:outline-white text-white"
             />
             <input
               type="text"
@@ -77,7 +77,7 @@ const UserForm = ({ addNewData, setAddNewData }) => {
               name="hobbies"
               value={formData.hobbies}
               onChange={changeHandler}
-              className="w-full dark:bg-gray-700 p-3 rounded-md outline-nonetext-white focus:outline-white"
+              className="w-full dark:bg-gray-700 p-3 rounded-md outline-nonetext-white focus:outline-white text-white"
             />
 
             <button

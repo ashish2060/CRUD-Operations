@@ -8,7 +8,6 @@ export async function POST(request, content) {
 
     const userData = await request.json();
     const userId = content.params.id;
-    console.log(userId);
 
     const updateUser = await userModel.findOneAndUpdate(
       { _id: userId },
